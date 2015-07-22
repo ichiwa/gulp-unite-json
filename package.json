@@ -1,0 +1,31 @@
+{
+  "name": "gulp-unite-json",
+  "version": "0.0.1",
+  "description": "> unite-json plugin for [gulp](https://github.com/wearefractal/gulp)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "author": {
+    "name": "ichiwa"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "through2": "^2.0.0",
+    "gulp-util": "^3.0.6",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2",
+    "event-stream": "^3.3.1"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiwa/gulp-unite-json.git"
+  }
+}

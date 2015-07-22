@@ -16,10 +16,10 @@ After that, add it to your `gulpfile.js`:
 ## Code Example
 
 ```javascript
-var gulp_union_all_json = require('gulp-unite-json');
+var gulp_unite_json = require('gulp-unite-json');
 
 gulp.src("./src/*.json")
-	.pipe(gulp_union_all_json("result.json")
+	.pipe(gulp_unite_json("result.json")
 	.pipe(gulp.dest("./dest"));
 ```
 ./src/test1.json

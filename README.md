@@ -1,7 +1,8 @@
 # gulp-unite-json
 > union-all-json plugin for [gulp](https://github.com/wearefractal/gulp)
 
-This will unite json files like UNION ALL of SQL.
+This will unite json files.
+If key is duplicated in the json united, throw error.
 
 ## Usage
 

@@ -1,5 +1,4 @@
 # gulp-unite-json
-[![NPM version][npm-image]][npm-url] 
 > unite-json plugin for [gulp](https://github.com/wearefractal/gulp)
 
 This will unite json files.

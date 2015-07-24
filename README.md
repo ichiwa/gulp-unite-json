@@ -1,5 +1,5 @@
 # gulp-unite-json
-[![NPM version][npm-image]][npm-url]
+[![npm version](https://badge.fury.io/js/gulp-unite-json.svg)](http://badge.fury.io/js/gulp-unite-json)
 > unite-json plugin for [gulp](https://github.com/wearefractal/gulp)
 
 This will unite json files.

@@ -16,6 +16,7 @@ module.exports = function (resultFileName) {
   }
   var jsonObject = {};
   var firstFile = null;
+  var hasError = false;
   function transform(file, encode, callback) {
     if (file.isStream()) {
       this.emit('error', new PluginError(PLUGIN_NAME,  'Streaming not supported'));
@@ -25,24 +26,28 @@ module.exports = function (resultFileName) {
     if (!firstFile) {
       firstFile = file;
     }
+
+    var self = this;
     var content = JSON.parse(file.contents.toString());
     _.each(content, function(value, key, obj){
       if (!_.has(jsonObject, key)){
         jsonObject[key] = value;
       } else {
-        callback(new PluginError(PLUGIN_NAME, format('Key[%s] is Duplicated for %s', key, PLUGIN_NAME)));
+        hasError = true;
+        self.emit('error', new PluginError(PLUGIN_NAME, format('Key "%s" is duplicated in file %s', key, file.path)));
       }
     });
     callback();
   }
   function flush(callback){
+    if (hasError || !firstFile) return;
     var output = new gutil.File({
       cwd:  firstFile.cwd,
       base: firstFile.base,
-      path: firstFile.base + resultFileName,
+      path: firstFile.base + resultFileName
     });
     output.contents = new Buffer(JSON.stringify(jsonObject));
     this.push(output);
   }
   return through2.obj(transform, flush);
-}
+};

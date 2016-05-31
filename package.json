@@ -1,6 +1,6 @@
 {
   "name": "gulp-unite-json",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": " unite-json plugin for gulp",
   "main": "index.js",
   "scripts": {

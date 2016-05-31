@@ -1,7 +1,7 @@
 {
   "name": "gulp-unite-json",
   "version": "0.0.7",
-  "description": "> unite-json plugin for [gulp](https://github.com/wearefractal/gulp)",
+  "description": " unite-json plugin for gulp",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js"

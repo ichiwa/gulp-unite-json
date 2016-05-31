@@ -43,10 +43,7 @@ describe('unite_json', function () {
 		var count  = 0;
 		var stream = unite_json("test");
 		stream.on("error", function(err){
-			count ++;
-			if (fakeFiles.length <= count){
-				done(); // test success
-			}
+			done();
 		})
 		stream.on("end", function () {
 			throw new Error("something wrong.");
